@@ -1,0 +1,90 @@
+{
+	"Instances": [
+		{
+			"platform": "aws",
+			"instance_name": "AWS-01-AmazonLinuxAMI",
+			"VM_name": "ami-0e2ff28bfb72a4e45",
+			"VM_size": "t2.micro",
+			"storage": "Y",
+			"storage_type": "EBS",
+			"storage_size": 8,
+			"ssh_file": "ec2-1-keypair"
+		},
+		{
+			"platform": "aws",
+			"instance_name": "AWS-01-UbuntuLTS",
+			"VM_name": "ami-07ebfd5b3428b6f4d",
+			"VM_size": "t2.micro",
+			"storage": "N",
+			"storage_type": "NULL",
+			"storage_size": 0,
+			"ssh_file": "ec2-1-keypair"
+		},
+		{
+			"platform": "azure",
+			"instance_name": "Azure-Ubuntu",
+			"VM_name": "Canonical:UbuntuServer:16.04.0-LTS:16.04.202002181",
+			"VM_size": "Standard_B1s",
+			"storage": "N",
+			"storage_size": 8
+		},
+		{
+			"platform": "azure",
+			"instance_name": "Azure-Debian",
+			"VM_name": "Debian:debian-10:10:0.20200210.166",
+			"VM_size": "Standard_B1s",
+			"storage": "N",
+			"storage_size": "NULL"
+		}
+	],
+	"Containers": [
+		{
+			"instance_name": "AWS-01-AmazonLinuxAMI",
+			"docker_name": "golang",
+			"registry": "library",
+			"background":"Y"
+		},
+		{
+			"instance_name": "AWS-01-AmazonLinuxAMI",
+			"docker_name": "gcc",
+			"registry": "library",
+			"background":"N"
+		},
+		{
+			"instance_name": "AWS-01-UbuntuLTS",
+			"docker_name": "golang",
+			"registry": "library",
+			"background":"N"
+		},
+		{
+			"instance_name": "AWS-01-UbuntuLTS",
+			"docker_name": "gcc",
+			"registry": "library",
+			"background":"Y"
+		},
+		{
+			"instance_name": "Azure-Ubuntu",
+			"docker_name": "swift",
+			"registry": "library",
+			"background":"N"
+		},
+		{
+			"instance_name": "Azure-Ubuntu",
+			"docker_name": "julia",
+			"registry": "library",
+			"background":"N"
+		},
+		{
+			"instance_name": "Azure-Debian",
+			"docker_name": "swift",
+			"registry": "library",
+			"background":"Y"
+		},
+		{
+			"instance_name": "Azure-Debian",
+			"docker_name": "julia",
+			"registry": "library",
+			"background":"N"
+		}
+	]
+}

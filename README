@@ -1,0 +1,18 @@
+***************************************
+Samuel Tracz
+CIS 4010 Assignment 2
+February 24, 2020
+***************************************
+
+
+To generate aws ssh key:
+    python3 ec2_create_key.py
+
+To create ec2 instances:
+    python3 ec2_create_instances.py
+
+To create azure vms:
+    python3 az_create_instances.py
+
+To montior the vms for both 
+    python3 monitor.py
